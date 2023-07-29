@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To Do list</title>
+</head>
+<body>
+    <div class="heading">
+        <h1> <%= kindOfDay  %> </h1>
+        <h3></h3>
+    </div>
+
+
+<ul class = "box"> 
+   <% for (i = 0; i< newListItems.length; i++) { %>
+    <li> <%=  newListItems[i] %></li> 
+ <% } %>  
+
+
+    <form action="/" method="post">
+     <input type="text" name="newItem" autocomplete="off" placeholder="newItem" class="input">
+     <button type="submit" class="addButton">+</button>
+    </form>
+</ul>
+
+</body>
+</html>
+
